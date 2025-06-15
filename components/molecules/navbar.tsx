@@ -1,4 +1,6 @@
 import { ModeToggle } from "../atoms/mode-toggle";
+import StepButton from "../atoms/step-button";
+import StepGroup from "./step-group";
 
 export default function Navbar() {
     return (
@@ -6,7 +8,9 @@ export default function Navbar() {
             <p  className="text-xl font-bold text-primary">
                 Imaginary
             </p>
+            <StepGroup />
             <ModeToggle />
+            
         </nav>
     );
 }
