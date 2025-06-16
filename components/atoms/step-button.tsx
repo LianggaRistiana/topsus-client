@@ -22,7 +22,7 @@ const stepButtonVariants = cva(
 );
 
 const activeStep = (boolean: boolean): string => {
-  if (boolean) return "border-white border-2";
+  if (boolean) return "border-foreground border-2";
   return "";
 }
 
