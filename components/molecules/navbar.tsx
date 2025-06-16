@@ -14,7 +14,7 @@ export default function Navbar({ title = "Imaginary" }: NavbarProps) {
       <p className="absolute left-1/2 -translate-x-1/2 text-xl font-bold text-primary">
         {title}
       </p>
-      
+
       <ModeToggle />
     </nav>
   );
