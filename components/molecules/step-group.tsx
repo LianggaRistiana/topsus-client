@@ -2,11 +2,6 @@
 import StepBridge from "../atoms/step-bridge";
 import StepButton from "../atoms/step-button";
 
-type StepItem = {
-  title: string;
-  href: string;
-};
-
 type StepGroupProps = {
   steps: StepItem[];
   currentStep: number; 
