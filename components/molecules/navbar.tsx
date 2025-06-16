@@ -10,8 +10,8 @@ type NavbarProps = {
 
 const steps: StepItem[] = [
     { no: 1, title: "Susun cerita dan voice over", href: "/add-story" },
-    { no: 2, title: "Pilih adegan video", href: "/step-2" },
-    { no: 3, title: "Export video", href: "/step-3" },
+    { no: 2, title: "Pilih adegan video", href: "/edit-scene" },
+    { no: 3, title: "Export video", href: "/export-video" },
 ]
 
 export default function Navbar({ title = "Imaginary" }: NavbarProps) {
@@ -30,7 +30,7 @@ export default function Navbar({ title = "Imaginary" }: NavbarProps) {
                 steps={steps}
             />
 
-            <p className="absolute left-1/2 -translate-x-1/2 text-xl font-bold text-primary">
+            <p className="absolute left-1/2 -translate-x-1/2 text-lg font-bold text-primary">
                 {/* {title} */}
                 {displayTitle}
             </p>

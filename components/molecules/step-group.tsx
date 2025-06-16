@@ -20,7 +20,7 @@ export default function StepGroup({ steps, currentStep, focusStep }: StepGroupPr
 
         return (
           <div key={step.href} className="flex items-center">
-            <StepButton isActive={isActive} isDone={isDone} onClick={() => {
+            <StepButton isActive={isActive} isDone={isDone} isClickable onClick={() => {
               window.location.href = step.href;
             }}>
               {stepNumber}

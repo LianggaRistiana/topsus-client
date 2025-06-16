@@ -2,6 +2,6 @@
 
 export default function AddStory() {
     return (
-        <div> ADD STORY</div>
+        <div className="w-full h-[500px] bg-sidebar border rounded-lg"> </div>
     )
 }
