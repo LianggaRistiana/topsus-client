@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"; // asumsi kamu pakai `cn` dari shadcn/utils
 
 // 1. Variants
 const stepButtonVariants = cva(
-  "rounded-full w-10 h-10 px-2 py-2 flex items-center justify-center text-xs transition-colors",
+  "rounded-full w-8 h-8 flex items-center justify-center text-xs transition-colors",
   {
     variants: {
       variant: {
@@ -21,9 +21,16 @@ const stepButtonVariants = cva(
   }
 );
 
+const activeStep = (boolean: boolean): string => {
+  if (boolean) return "border-white border-2";
+  return "";
+}
+
+
 // 2. Props
 type StepButtonProps = {
   isActive: boolean;
+  isDone: boolean
   isClickable?: boolean;
   onClick?: () => void;
   children?: React.ReactNode;
@@ -34,17 +41,18 @@ type StepButtonProps = {
 // 3. Component
 export default function StepButton({
   isActive,
+  isDone,
   isClickable = false,
   onClick,
   children,
   className,
 }: StepButtonProps) {
-  const variant = isActive ? "active" : "inactive";
+  const variant = isDone ? "active" : "inactive";
 
   return (
     <button
       type="button"
-      className={cn(stepButtonVariants({ variant }), className)}
+      className={cn(stepButtonVariants({ variant }), className, activeStep(isActive))}
       onClick={isClickable ? onClick : undefined}
       disabled={!isClickable}
     >
